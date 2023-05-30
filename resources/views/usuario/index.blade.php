@@ -16,14 +16,14 @@
             </tr>
         </thead>
         <tbody>
-
+            @foreach ($usuarios as $usuario)
             <tr>
                 <th></th>
-                <th></th> 
-                <th></th>
-                <th></th>
+                <th>{{$usuario->name}}</th>
+                <th>{{$usuario->email}}</th>
+                <th>{{$usuario->created_at->format('d/m/Y')}}</th>
             </tr>
-
+            @endforeach
         </tbody>
     </table>
 

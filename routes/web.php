@@ -38,6 +38,6 @@ Route::middleware('auth')->group(function () {
  * Usuarios
  * -------------------------------------
  */
-Route::get('/usuarios',[UserController::class]);
+Route::get('/usuarios',[UserController::class, 'index'])->name('usuario.index');
 
 require __DIR__.'/auth.php';
