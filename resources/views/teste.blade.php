@@ -1,7 +1,9 @@
 @extends('layouts.base')
 
 @section('content')
-<h1>teste</h1>
+<div class="container">
+
+    <h1>teste</h1>
 <table class="table table-border table-striped">
 
     <tr>
@@ -41,4 +43,5 @@
         <td>10</td>
     </tr>
 </table>
+</div>
 
