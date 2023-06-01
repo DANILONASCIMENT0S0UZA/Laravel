@@ -18,13 +18,10 @@
 <body>
     <div class="container">
         <h1>T94 - Olá Mundo</h1>
+        
+        <hr>
         @yield('content')
         <hr>
-        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Minus atque adipisci veniam sed fugiat ipsam unde id vel ipsa, ea quo velit. Dignissimos a blanditiis amet ex expedita numquam? Neque?</p>
-        <p>Modi esse natus deserunt aspernatur, quidem molestiae neque consequuntur autem sequi pariatur hic quo dignissimos accusantium iste ex veritatis consectetur assumenda doloribus blanditiis perferendis placeat unde dolores. Asperiores, neque iste?</p>
-        <p>Quisquam architecto accusamus nisi delectus officia soluta qui impedit ea aut natus saepe velit unde quibusdam voluptates ab placeat, incidunt dicta ex amet ad animi quam aliquid fuga. Quaerat, laboriosam!</p>
-        <p>Beatae natus consectetur voluptate, eveniet ducimus harum suscipit quaerat at reprehenderit distinctio voluptatem eum aspernatur dolorum sint animi laborum rem dolor fugiat similique placeat maiores et doloribus? Voluptate, atque ullam.</p>
-        <p>Quidem, nobis odio reiciendis distinctio nihil totam veniam quibusdam rerum, obcaecati minus ipsam corrupti necessitatibus doloremque quia eligendi similique dolor aut et fugit quis. Omnis earum reprehenderit molestias ex odit.</p>
 
     </div>
 

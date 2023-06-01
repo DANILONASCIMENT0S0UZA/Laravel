@@ -24,7 +24,8 @@ class UserController extends Controller
      */
     public function create()
     {
-        //
+        $usuario = null;
+        return view('usuario.form')->with(compact('usuario'));
     }
 
     /**

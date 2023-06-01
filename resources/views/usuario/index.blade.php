@@ -10,6 +10,7 @@
     <table class="table table-border table-striped">
         <thead>
             <tr>
+
                 <th>Ações</th>
                 <th>Nome</th>
                 <th>E-mail</th>
@@ -19,10 +20,10 @@
         <tbody>
             @foreach ($usuarios as $usuario)
             <tr>
-                <th></th>
-                <th>{{$usuario->name}}</th>
-                <th>{{$usuario->email}}</th>
-                <th>{{$usuario->created_at->format('d/m/Y')}}</th>
+                <td><a class="btn btn-success" href="{{ route('usuario.show', ['id'=>$usuario->id]) }}">Ver</a></td>
+                <td>{{$usuario->name}}</td>
+                <td>{{$usuario->email}}</td>
+                <td>{{$usuario->created_at->format('d/m/Y')}}</td>
             </tr>
             @endforeach
         </tbody>
