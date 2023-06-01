@@ -2,7 +2,7 @@
 
 @section('content')
 
-<form action="" method="post">
+<form action="{{ route('usuario.store') }}" method="post">
     @csrf
 
     <div class="row">
@@ -19,6 +19,24 @@
             <input type="email" name="email" id="email" class="form-control">
         </div>
 
+        <br><br><br><br>
+        <div class="col-md-6">
+            <label for="password" class="form-label">Senha*</label>
+            <input type="password" name="password" id="password" class="form-control" required>
+        </div>
+
+        <br><br><br><br>
+        <div class="col-md-6">
+            <label for="" class="form-label">Confimar Senha</label>
+            <input type="password" name="" id="" class="form-control" required>
+        </div>
+
+        <br><br><br><br>
+        <div class="col-md-2">
+
+            <input class="btn btn-success" type="submit" value="Cadastrar">
+
+        </div>
     </div>
 </form>
 
