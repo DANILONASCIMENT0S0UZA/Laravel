@@ -5,6 +5,7 @@
 <div class="container">
 
     <h1>Usuários</h1>
+    <p>{{$usuarios->links()}}</p>
 
     <table class="table table-border table-striped">
         <thead>
