@@ -6,9 +6,14 @@
 
     <h1>Usuários</h1>
     <h2>
-        <a class="btn btn-danger"
+        <a class="btn btn-info"
          href="{{ route('usuario.create')}}">Novo Usuário</a>
     </h2>
+    @if (Session::has('danger'))
+    <div class="alert alert-danger">
+        {!! Session::get('danger')!!}
+    </div>
+    @endif
     <p>{{$usuarios->links()}}</p>
 
     <table class="table table-border table-striped">
