@@ -44,6 +44,10 @@ Route::get('/usuarios/novo',[UserController::class,'create'])->name('usuario.cre
 
 Route::get('/usuarios/{id}',[UserController::class,'show'])->name('usuario.show');
 
+Route::get('/usuarios/editar/{id}',[UserController::class,'edit'])->name('usuario.edit');
+
 Route::post('/usuarios/cadastrar',[UserController::class,'store'])->name('usuario.store');
+
+Route::post('/usuarios/atualizar/{id}',[UserController::class,'update'])->name('usuario.update');
 
 require __DIR__.'/auth.php';

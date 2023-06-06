@@ -33,7 +33,25 @@ class UserController extends Controller
      */
     public function store(Request $request)
     {
-        dd($request);
+
+        $validated = $request->validate([
+                'name' => 'required',
+                'email' => 'required|unique:users',
+                'password' => 'required|confirmed|min:4',
+        ]);
+
+        $usuario = User::create($request->all());
+
+        //$usuario = new User();
+        //$usuario->create($request->all());
+        //$usuario->save();
+
+        //$usuario->fill($request->all());
+        //$usuario->name = strtoupper($request->name);
+        //$usuario->save();
+
+
+        return redirect()->route('usuario.show',['id'=>$usuario->id]);
     }
 
     /**
@@ -50,7 +68,8 @@ class UserController extends Controller
      */
     public function edit(string $id)
     {
-        //
+        $usuario = User::find($id);
+        return view('usuario.form')->with(compact('usuario'));
     }
 
     /**
