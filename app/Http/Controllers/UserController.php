@@ -7,6 +7,8 @@ use Illuminate\Http\Request;
 // Models
 use App\Models\User;
 
+use function Pest\Laravel\delete;
+
 class UserController extends Controller
 {
     /**
@@ -77,7 +79,10 @@ class UserController extends Controller
      */
     public function update(Request $request, string $id)
     {
-        //
+        $usuario = User::find($id);
+        $usuario->update($request->all());
+
+        return redirect()->route('usuario.show',['id'=>$usuario->id])->with('success','Atualizado com Sucesso');
     }
 
     /**
@@ -85,6 +90,10 @@ class UserController extends Controller
      */
     public function destroy(string $id)
     {
-        //
+
+        $usuario = User::find($id);
+        $usuario->delete();
+
+        return redirect()->back()->with('danger','Excluido com sucesso!');
     }
 }

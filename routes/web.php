@@ -46,6 +46,8 @@ Route::get('/usuarios/{id}',[UserController::class,'show'])->name('usuario.show'
 
 Route::get('/usuarios/editar/{id}',[UserController::class,'edit'])->name('usuario.edit');
 
+Route::get('/usuarios/excluir/{id}',[UserController::class,'destroy'])->name('usuario.destroy');
+
 Route::post('/usuarios/cadastrar',[UserController::class,'store'])->name('usuario.store');
 
 Route::post('/usuarios/atualizar/{id}',[UserController::class,'update'])->name('usuario.update');

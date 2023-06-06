@@ -29,6 +29,8 @@
                      ['id'=>$usuario->id]) }}">Ver</a>
                      <a class="btn btn-primary"
                       href="{{route('usuario.edit',['id'=>$usuario->id])}}">Editar</a>
+                      <a class="btn btn-danger"
+                      href="{{route('usuario.destroy',['id'=>$usuario->id])}}">Excluir</a>
                 </td>
                 <td>{{$usuario->name}}</td>
                 <td>{{$usuario->email}}</td>
